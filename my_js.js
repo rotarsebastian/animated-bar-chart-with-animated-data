@@ -16,7 +16,7 @@ async function getJSON() {
     // For each takes each element in our json and does something to them.
     // Each element is in this case represented by "eachbar" and we also have an iterator going
     // counting from zero and op enabling us to point at our box classes 1 to 6,
-    let myWidth = 50;
+    let myWidth = 55;
     let svgns = "http://www.w3.org/2000/svg";
     bars.forEach((eachBar, i) => {
         // Here we ask Tweenlite to tween box0 to box 5 with an elastic ease and a one second duration. Try to fiddle wit the duration!
@@ -58,14 +58,14 @@ async function getJSON() {
             ease: Circ.easeOut, y: -500
         });
 
-        // place them on the x axis (which is now rotated by 90 degrees)
+        // place them on the x axis (which is now rotated by 45 degrees)
 
         // Here we take our text0 to text5 rotatet them
-        text.setAttribute("transform", "rotate(90)");
-        // place them on the x axis (which is now rotated by 90 degrees)
-        text.setAttribute("x", "205");
-        // distributing the on the y axis (which is now also rotated by 90 degrees)
-        text.setAttribute("y", (-13 * i) - 53);
+        text.setAttribute("transform", "rotate(-45)");
+        // place them on the x axis (which is now rotated by 45 degrees)
+        text.setAttribute("y", (i * 9.22) + 190);
+        // distributing the on the y axis (which is now also rotated by 45 degrees)
+        text.setAttribute("x", (i * 9.22) - 100);
         // Here we set the names of our bars. We get the names from JSON: "bar".
         text.textContent = eachBar.socialnetworks;
         text.readOnly = true;
@@ -73,12 +73,13 @@ async function getJSON() {
 
 
         // Here we take our text0 to text5 rotatet them
-        dataText.setAttribute("transform", "rotate(90)");
+        dataText.setAttribute("transform", "rotate(-90)");
         // place them on the x axis (which is now rotated by 90 degrees)
-        dataText.setAttribute("x", "184");
+        dataText.setAttribute("x", "-198");
         // distributing the on the y axis (which is now also rotated by 90 degrees)
-        dataText.setAttribute("y", (-13 * i) - 53);
+        dataText.setAttribute("y", (i * 13) + 62.5);
         // Here we set the names of our bars. We get the names from JSON: "bar".
+
         dataText.textContent = eachBar.users;
 
         dataText.style.display = "none";

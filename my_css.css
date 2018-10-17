@@ -25,11 +25,17 @@ text{
     font-size: 40%;
     font-weight: 540;
     fill: white;
+    text-anchor: end;
 }
 
 .data-text{
     font-size: 42%;
     font-weight: bolder;
+    text-anchor: start;
+}
+
+.title{
+    font-size: 60%;
 }
 
 .data-text:hover{
