@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 /*Getting rid of space around the main content*/
 body{
-     margin: 0;
+    margin: 0;
     padding:0;
 
 }
 
-
-
 svg .box:hover{
-    opacity: .7 !important;
+    opacity: .66 !important;
 }
 
 

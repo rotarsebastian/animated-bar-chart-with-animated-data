@@ -75,7 +75,7 @@ async function getJSON() {
         // Here we take our text0 to text5 rotatet them
         dataText.setAttribute("transform", "rotate(90)");
         // place them on the x axis (which is now rotated by 90 degrees)
-        dataText.setAttribute("x", "185");
+        dataText.setAttribute("x", "184");
         // distributing the on the y axis (which is now also rotated by 90 degrees)
         dataText.setAttribute("y", (-13 * i) - 53);
         // Here we set the names of our bars. We get the names from JSON: "bar".
@@ -101,7 +101,7 @@ function getOpacityForBar(myBar) {
     let numsArray = Array.from(nums);
     for (let i = 0; i < numsArray.length; i++) {
         if (((myBar.textContent) / 12).toFixed(1) == (numsArray[i].height.baseVal.value).toFixed(1)) {
-            numsArray[i].style.opacity = ".7";
+            numsArray[i].style.opacity = ".66";
         }
 
     }
@@ -123,7 +123,7 @@ function showDataOnHover(myBar) {
     let numsArray = Array.from(nums);
     for (let i = 0; i < numsArray.length; i++) {
         if (((numsArray[i].textContent) / 12).toFixed(1) == (myBar.height.baseVal.value).toFixed(1)) {
-            numsArray[i].classList.toggle("show");
+            numsArray[i].style.display = "block";
         }
 
     }
@@ -134,7 +134,7 @@ function hideDataOnHover(myBar) {
     let numsArray = Array.from(nums);
     for (let i = 0; i < numsArray.length; i++) {
         if (((numsArray[i].textContent) / 12).toFixed(1) == (myBar.height.baseVal.value).toFixed(1)) {
-            numsArray[i].classList.toggle("show");
+            numsArray[i].style.display = "none";
         }
 
     }
