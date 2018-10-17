@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+/*Getting rid of space around the main content*/
+body{
+     margin: 0;
+    padding:0;
+
+}
+
+
+
+svg .box:hover{
+    opacity: .7 !important;
+}
+
+
+/*Background color of the SVG*/
+svg {
+  background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/*Font size and family*/
+text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40%;
+    font-weight: 540;
+    fill: white;
+}
+
+.data-text{
+    font-size: 42%;
+    font-weight: bolder;
+}
+
+.data-text:hover{
+    display: block !important;
+}
+
+
+.show{
+    display: block !important;
+}
+
+
+/*This is the code that does the trick of */
+.box{
+    y: -200;
+    transform: scale(1,-1);
+}
